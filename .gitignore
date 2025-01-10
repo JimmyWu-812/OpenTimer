@@ -25,3 +25,5 @@
 *.exe
 *.out
 *.app
+
+ot/config.hpp
