@@ -17,13 +17,21 @@ inline Logger logger(env::log_file());
 #define OT_LOG_GET_FIRST(...) OT_LOG_GET_FIRST_HELPER(__VA_ARGS__)
 #define OT_LOG_REMOVE_FIRST(...) OT_LOG_REMOVE_FIRST_HELPER(__VA_ARGS__)
 
-#define OT_LOGTO(...) ot::logger.redir  (__VA_ARGS__)
-#define OT_LOG(...)   ot::logger.raw    (__VA_ARGS__)
-#define OT_LOGD(...)  ot::logger.debug  (__FILE__, __LINE__, __VA_ARGS__, '\n')
-#define OT_LOGI(...)  ot::logger.info   (__FILE__, __LINE__, __VA_ARGS__, '\n')
-#define OT_LOGW(...)  ot::logger.warning(__FILE__, __LINE__, __VA_ARGS__, '\n')
-#define OT_LOGE(...)  ot::logger.error  (__FILE__, __LINE__, __VA_ARGS__, '\n')
-#define OT_LOGF(...)  ot::logger.fatal  (__FILE__, __LINE__, __VA_ARGS__, '\n')
+// #define OT_LOGTO(...) ot::logger.redir  (__VA_ARGS__)
+// #define OT_LOG(...)   ot::logger.raw    (__VA_ARGS__)
+// #define OT_LOGD(...)  ot::logger.debug  (__FILE__, __LINE__, __VA_ARGS__, '\n')
+// #define OT_LOGI(...)  ot::logger.info   (__FILE__, __LINE__, __VA_ARGS__, '\n')
+// #define OT_LOGW(...)  ot::logger.warning(__FILE__, __LINE__, __VA_ARGS__, '\n')
+// #define OT_LOGE(...)  ot::logger.error  (__FILE__, __LINE__, __VA_ARGS__, '\n')
+// #define OT_LOGF(...)  ot::logger.fatal  (__FILE__, __LINE__, __VA_ARGS__, '\n')
+
+#define OT_LOGTO(...)
+#define OT_LOG(...)  
+#define OT_LOGD(...) 
+#define OT_LOGI(...) 
+#define OT_LOGW(...) 
+#define OT_LOGE(...) 
+#define OT_LOGF(...) 
 
 #define OT_LOG_IF(...) if(OT_LOG_GET_FIRST(__VA_ARGS__)) {          \
                          OT_LOG(OT_LOG_REMOVE_FIRST(__VA_ARGS__));  \
