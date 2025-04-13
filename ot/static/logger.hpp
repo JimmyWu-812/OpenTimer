@@ -26,12 +26,12 @@ inline Logger logger(env::log_file());
 // #define OT_LOGF(...)  ot::logger.fatal  (__FILE__, __LINE__, __VA_ARGS__, '\n')
 
 #define OT_LOGTO(...)
-#define OT_LOG(...)  
-#define OT_LOGD(...) 
-#define OT_LOGI(...) 
-#define OT_LOGW(...) 
-#define OT_LOGE(...) 
-#define OT_LOGF(...) 
+#define OT_LOG(...)
+#define OT_LOGD(...)
+#define OT_LOGI(...)
+#define OT_LOGW(...)
+#define OT_LOGE(...)
+#define OT_LOGF(...)
 
 #define OT_LOG_IF(...) if(OT_LOG_GET_FIRST(__VA_ARGS__)) {          \
                          OT_LOG(OT_LOG_REMOVE_FIRST(__VA_ARGS__));  \
